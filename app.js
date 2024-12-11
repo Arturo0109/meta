@@ -73,7 +73,7 @@ const adapterFlow = createFlow([flowPrincipal]);
 const adapterProvider = createProvider(MetaProvider, {
     jwtToken: 'jwtToken',
     numberId: 'numberId',
-    verifyToken: 'verifyToken',
+    verifyToken: 'EAAVVlgE0qZC8BO4kvDHDFsSGIpYoKgt5oQZBlAKX3qKHx8pmAmWxA4SuNog0eRwYzrfDWh9wdU3I47QqY1YyOIxJ6ZB5EKZAZAEo2GZAnOoQnWDxc6ZAOEI9HKwRjJBGpPDHv5BAYr5OIind9j5C6V6etW84nZAZAAYFNKLgN80ju2L0mYXM2ROepjmivEC8ZBlhG3XqklZBRJDU3oGXDuybImgvy0cogZDZD',
     version: 'v16.0',
 });
 
@@ -86,7 +86,7 @@ const bot = createBot({
 module.exports = async (req, res) => {
     if (req.method === 'GET') {
         // Verificación del Webhook de Meta
-        const VERIFY_TOKEN = 'verifyToken';
+        const VERIFY_TOKEN = 'EAAVVlgE0qZC8BO4kvDHDFsSGIpYoKgt5oQZBlAKX3qKHx8pmAmWxA4SuNog0eRwYzrfDWh9wdU3I47QqY1YyOIxJ6ZB5EKZAZAEo2GZAnOoQnWDxc6ZAOEI9HKwRjJBGpPDHv5BAYr5OIind9j5C6V6etW84nZAZAAYFNKLgN80ju2L0mYXM2ROepjmivEC8ZBlhG3XqklZBRJDU3oGXDuybImgvy0cogZDZD';
         const mode = req.query['hub.mode'];
         const token = req.query['hub.verify_token'];
         const challenge = req.query['hub.challenge'];
